@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="content">
+        @if($report)
         <div class="title">
             @lang('Casos en ') {{ $report->country }}
             <div class="title">
@@ -21,5 +22,10 @@
         <div class="date">
             @lang('Última actualización:') <span>{{ $report->update }}</span>
         </div>
+        @else
+        <div class="title">
+            @lang('Datos no disponibles en este momento.')
+        </div>
+        @endif
     </div>
 @stop
