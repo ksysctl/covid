@@ -1,0 +1,70 @@
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+
+  > span {
+    font-size: 16px;
+  }
+}
+
+.groups {
+  list-style-type: none;
+  overflow: hidden;
+
+  > li {
+    color: #636b6f;
+    padding: 0 24px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: left;
+
+    > span {
+      font-size: 80px;
+    }
+
+    .confirmed {
+      color: #1c1c84;
+    }
+
+    .deaths {
+      color: #b30000;
+    }
+
+    .recovered {
+      color: #368645;
+    }
+
+    .active {
+      color: #998a68;
+    }
+  }
+}
+
+.date {
+  font-size: 12px;
+
+  > span {
+    font-weight: 600;
+    color: #735be0;
+  }
+}

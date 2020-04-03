@@ -13,4 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'ReportController@show')->name('report');
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/report', 'ReportController@show')->name('report');
