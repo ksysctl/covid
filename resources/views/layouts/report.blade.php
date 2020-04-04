@@ -21,6 +21,7 @@
 
         <div class="date">
             @lang('Última actualización:') <span>{{ $report->update }}</span>
+            <p>@lang('Información obtenida de repositorio de ') <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins</a></p>
         </div>
         @else
         <div class="title">
