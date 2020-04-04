@@ -4,6 +4,11 @@
 
 COVID is a web application to test Laravel framework features.
 
+### URLs
+
+* Website: http://localhost:8000
+* Mailhog: http://localhost:8025
+
 ### Common tasks
 
 * Create database and an assign user with its correct privileges.
@@ -108,3 +113,8 @@ MAIL_ENCRYPTION=
 DAILY_REPORT_TIMEOUT = 0
 DAILY_REPORT_BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
 ```
+
+### Default user
+- Email: developer@covid.local
+- Password: password
+
