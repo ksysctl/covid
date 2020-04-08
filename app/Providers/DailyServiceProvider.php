@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Library\Services\DailyReport;
-use GuzzleHttp\Client;
+use App\Library\Services\ReportClient;
 
 class DailyServiceProvider extends ServiceProvider
 {
@@ -15,15 +15,8 @@ class DailyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(Client::class, function () {
-            return new Client([
-                'headers' => [
-                    'Accept' => 'text/csv',
-                ],
-                'stream' => true,
-                'timeout' => env('DAILY_REPORT_TIMEOUT'),
-                'base_uri' => env('DAILY_REPORT_BASE_URL'),
-            ]);
+        $this->app->singleton(ReportClient::class, function () {
+            return new ReportClient();
         });
 
         $this->app->bind(DailyReport::class, function () {

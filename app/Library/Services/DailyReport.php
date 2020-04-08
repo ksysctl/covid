@@ -2,7 +2,6 @@
 
 namespace App\Library\Services;
 
-use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use App\Model\DailyReport as DailyReportModel;
@@ -21,7 +20,7 @@ class DailyReport
 
     public function __construct()
     {
-        $this->client = app(Client::class);
+        $this->client = app(ReportClient::class);
     }
 
     public function getRaw()
